@@ -7,4 +7,4 @@ const ChocolistSchema = new mongoose.Schema(
     },  {timestamps: true}
 )
 
-const chocolist.model("Chocolist", ChocolistSchema)
+const Chocolist = mongoose.model("Chocolist", ChocolistSchema)
