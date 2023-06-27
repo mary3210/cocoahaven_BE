@@ -1,4 +1,4 @@
-const mongoosse = require('mongoose')
+const mongoose = require('mongoose')
 
 const ChocolistSchema = new mongoose.Schema(
     {
@@ -8,3 +8,5 @@ const ChocolistSchema = new mongoose.Schema(
 )
 
 const Chocolist = mongoose.model("Chocolist", ChocolistSchema)
+
+module.exports = Chocolist
