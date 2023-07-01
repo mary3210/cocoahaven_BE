@@ -6,7 +6,8 @@ const db = require("../models");
 router.get("/", async (req, res) => {
   try {
     console.log("a");
-    const allChocolist = await Chocolisit.find({});
+    const allChocolist = await Chocolist.find({});
+    console.log(allChocolist)
     res.status(200).json(allChocolist);
   } catch (err) {
     res.status(400).json({ error: err });
@@ -14,7 +15,7 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  console.log(req.body);
+  console.log(req);
   try {
     const newChocolist = await Chocolist.create(req.body);
     res.status(201).json(newChocolist);
