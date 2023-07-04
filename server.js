@@ -15,6 +15,12 @@ app.use(cors());
 
 app.use("/posts", chocolistController);
 
+app.use("/login", (req, res) => {
+  res.send({
+    token: "test123",
+  });
+});
+
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
