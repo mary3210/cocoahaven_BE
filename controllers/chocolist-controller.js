@@ -27,7 +27,7 @@ router.post("/", async (req, res) => {
 router.put("/:id", async (req, res) => {
   try {
     const updatedChocolist = await Chocolist.findByIdAndUpdate(
-      req.oarams.id,
+      req.params.id,
       req.body,
       { new: true }
     );
