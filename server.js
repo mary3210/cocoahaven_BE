@@ -5,6 +5,7 @@ const app = express();
 app.use(cors());
 
 const chocolistController = require("./controllers/chocolist-controller");
+const authController = require("./controllers/users");
 
 require("dotenv").config();
 require("./config/db.connection");
@@ -15,6 +16,7 @@ app.use(cors());
 
 app.use("/posts", chocolistController);
 
+app.use("/auth", authController);
 app.use("/login", (req, res) => {
   res.send({
     token: "test123",
