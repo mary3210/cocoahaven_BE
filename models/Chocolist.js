@@ -1,12 +1,16 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
 const ChocolistSchema = new mongoose.Schema(
-    {
-        image: {type: String, required: true},
-        name: {type: String, required: true}
-    },  {timestamps: true}
-)
+  {
+    image: { type: String, required: true },
+    name: { type: String, required: true },
+    price: { type: Number },
+    detail: { type: String },
+    chocolate_type: { type: String },
+  },
+  { timestamps: true }
+);
 
-const Chocolist = mongoose.model("Chocolist", ChocolistSchema)
+const Chocolist = mongoose.model("Chocolist", ChocolistSchema);
 
-module.exports = Chocolist
+module.exports = Chocolist;
