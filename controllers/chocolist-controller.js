@@ -41,6 +41,16 @@ router.post("/createItem", async (req, res) => {
   }
 });
 
+router.post("/getOneChoco/:id", async (req, res) => {
+  try {
+    const oneChocolist = await Chocolist.findById(
+      req.params.id);
+    res.status(200).json(oneChocolist);
+  } catch (err) {
+    res.status(400).json({ error: err });
+  });
+
+
 router.post("/:id", async (req, res) => {
   try {
     const updatedChocolist = await Chocolist.findByIdAndUpdate(
