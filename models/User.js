@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema(
     cart: {
       type: mongoose.Types.ObjectId,
       ref: "Chocolist",
+      quantity: {type: Number},
     },
   },
   {

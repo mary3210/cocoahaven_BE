@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const { Chocolist } = require('../models');
-const db = require("../models");
 
 router.get("/allItems", async (req, res) => {
   try {
@@ -48,7 +47,7 @@ router.post("/getOneChoco/:id", async (req, res) => {
     res.status(200).json(oneChocolist);
   } catch (err) {
     res.status(400).json({ error: err });
-  });
+  }});
 
 
 router.post("/:id", async (req, res) => {
