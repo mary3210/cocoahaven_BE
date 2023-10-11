@@ -4,6 +4,7 @@ const app = express();
 const chocolistController = require("./controllers/chocolist-controller");
 const authController = require("./controllers/auth-controller");
 const bestsellerController = require('./controllers/bestseller-controller')
+const usercartController = require('./controllers/usercart-controller') 
 
 require("dotenv").config();
 require("./config/db.connection");
@@ -11,6 +12,8 @@ require("./config/db.connection");
 app.use(express.json());
 
 app.use(cors());
+
+app.use("/usercart", usercartController)
 
 app.use("/posts", chocolistController);
 
