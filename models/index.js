@@ -1,5 +1,5 @@
 module.exports = {
     Chocolist: require('./Chocolist'),
-    user: require('./User'),
+    User: require('./User'),
     BestSeller: require('./BestSeller'),
 }

@@ -7,13 +7,12 @@ const userSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-  },
-  {
-    cart: {
-      type: mongoose.Types.ObjectId,
-      ref: "Chocolist",
-      quantity: {type: Number},
-    },
+    cart: [
+      {
+        type: mongoose.Types.ObjectId,
+        ref: "Chocolist",
+      },
+    ]
   },
   {
     timestamps: true,
